@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="refresh" content="8; url=home.html">
+    
+
+    <!-- Add Google Font -->
+    <title>Splash Screen|EcoSpark</title>
+    <link rel="icon" href="student-1-w2120125/CW 1 WEB/logo.png" type="image/icon-type" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+
+            /* Reset default margin and padding for all elements */
+            margin: 0;
+            padding: 0;
+        }
+        /* Background image setup */
+        .background-image {
+            background-image: url('./student-1-w2120125/CW 1 WEB/Untitled design.png');/* Background image for the entire  web page */
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;/* Full viewport height */
+            position: relative; /* Makes sure child elements are positioned relative to this */
+        }
+        /* Main container */
+        #main {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;/* Prevents overflow issues */
+        }
+        /* Box 1 - The Animated block */
+        #box1 {
+            width: 600px;
+            height: 625px;
+            background-image: url('./student-1-w2120125/CW 1 WEB/Your\ paragraph\ te\ \(2\).png');/* Initial image */
+            background-size: cover;
+            position: absolute;
+            bottom: -100%;/* Initially placed off-screen */
+            left: 30%;
+            animation: slideUp 2s forwards, moveRight 3s forwards 2s; /* Runs two animations */
+        }
+        /* Animation: Slide up effect for #box1 */
+        @keyframes slideUp {
+            from {
+                bottom: -100%;
+            }
+            to {
+                bottom: 0%;
+            }
+        }
+        /* Animation: Move box to the right and change the background image */
+        @keyframes moveRight {
+            from {
+                left: 30%;
+                background-image: url('./student-1-w2120125/CW 1 WEB/Your\ paragraph\ te\ \(2\).png');
+            }
+            to {
+                left: calc(100% - 600px); /* Move to the right side, with some margin */
+                background-image: url('./student-1-w2120125/CW 1 WEB/Your\ paragraph te.png');/* Change image */
+            }
+        }
+        /* Box 2 - Contains the text */
+        #box2 {
+            position: absolute;
+            top: 150px; /* Adjusted top position */
+            left: -100%;/* Starts off-screen */
+            opacity: 0; /* Hide the text initially */
+            animation: slideIn 2s forwards 5s, fadeIn 1s forwards 5s;/* Text animations */
+            width: 50%; /* Limit text width for better readability */
+        }
+        /* Styling for each text section inside box2 */
+        #box2 .text1, #box2 .text2, #box2 .text3, #box2 .text4 {
+            width: auto;
+            height: auto;
+            color: whitesmoke;/* Text color */ 
+            line-height: 1.5; /* Adjusted line height for better spacing */
+            position: relative;
+        }
+        /* Text 1 - Main Title */
+        #box2 .text1 {
+            font-family: "Bahnschrift Condensed";
+            font-size: 4em; /* font size */
+            font-weight: 500;
+        }
+        /* Text 2 - slogan */
+        #box2 .text2 {
+            font-family: "Bahnschrift Condensed";
+            font-size: 2.5em; /* font size */
+            font-weight: 700; /* Bold */
+        }
+        /* Text 3 - Description */
+        #box2 .text3 {
+            font-family: "Bahnschrift Condensed";
+            font-size: 1.5em; /* font size */
+            font-weight: 700; /* Bold */
+        }
+        #box2 .text4 {
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.2em; /*font size */
+            font-weight: 700; /* Bold */
+            background-color: rgba(255, 255, 255, 0.2); /* Highlight effect */
+            padding: 10px; /* Add padding for better visibility */
+            border-radius: 5px; /* Rounded corners */
+        }
+        /* Animation: Slide-in effect for text */
+        @keyframes slideIn {
+            from {
+                left: -100%;/* Adjusted so text is fully visible */
+            }
+            to {
+                left: 10%; 
+            }
+        }
+        /* Animation: Fade-in effect for text */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        a {
+    color: white; /* Set the link color to white */
+    text-decoration: none; /* Remove underline from links */
+        }
+
+        a:hover {
+            color: white; /* Keep the color white when hovered */
+            text-decoration: underline; /* Add underline on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+
+    <!-- Background image container -->
+    <div class="background-image">
+        <!-- Main wrapper -->
+        <div id="main">
+            <!-- Animated box (moving image) -->
+            <div id="box1"></div>
+            <!-- Text content container -->
+            <div id="box2">
+                <div class="text1">✨ECO SPARK✨</div><!-- Title -->
+                <div class="text2">Light the Spark, Change the World.🤍</div><!-- Slogan -->
+                <div class="text3">EcoSpark is dedicated to igniting change for a sustainable future. Through awareness, action, and innovation, we empower individuals and communities to combat climate change and protect our planet. Together, we can spark a greener tomorrow.</div><!-- a brief statement summarizing the mission or purpose of the website. -->  
+                <div class="text4">Group-15(6)<br>
+                    <ul>
+                        <li><a href="validation_ST1.html">Student 1 - P.P.A.Silva</a></li>
+                        <li><a href="validation_ST-2.html">Student 2 - D.R.Wijesinghe</a></li>
+                        <li><a href="validation_ST3.html">Student 3 - E.A.S.R.Edirisinghe</a></li>
+                        <li><a href="validation_ST4.html">Student 4 - O.T.Hettihewa</a></li>
+                    </ul>
+                </div> <!-- Student details -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="css-all/user_profile/stylesProfile.css"> <!-- Link to external CSS file -->
+    <!--============ FAVICON ============-->
+    <link rel="shortcut icon" href="student-4-w2120560/png/logo.png" type="image/png">
+    <!--============ REMIXICONS ============-->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!--============ CSS ============-->
+    <link rel="stylesheet" href="css-all/user_profile/profileHeader.css">
+</head>
+<body>
+    <!--============ HEADER ============-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="home.html" class="nav__logo">
+                <img src="student-4-w2120560/png/logo.png" alt="Website Logo">
+            </a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="home.html" class="nav_link">Home</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="volunteer.html" class="nav_link">Volunteer</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="table.html" class="nav_link">Table</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="Profile.html" class="nav_link">Profile</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="Feedback.html" class="nav_link">Feedback</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="Sitemap.html" class="nav_link">Sitemap</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="Team Page.html" class="nav_link">Team</a>
+                    </li>
+                </ul>
+                <!-- Close button -->
+                <div class="nav__close" id="nav-close">
+                    <i class="ri-close-line"></i>
+                </div>
+            </div>
+            <!-- Toggle button -->
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- User Profile Content -->
+    <div class="profile-container">
+        <!-- User Avatar & Info -->
+        <div class="profile-header">
+            <img src="student-4-w2120560/png/profile-pic.jpg" alt="User Avatar" class="profile-img">
+            <h1 class="username">Okith Hettihewa</h1>
+            <p class="role">Computer Scientist</p>
+        </div>
+
+        <!-- Introduction Section -->
+        <div class="profile-intro">
+            <h2>About Me</h2>
+            <p>A 22 year old degree holder who is passionate about technology and coding. Loves contributing to the community while learning new skills regularly.</p>
+        </div>
+
+        <!-- Profile Information Section -->
+        <div class="profile-info">
+            <h2>Skills & Experience</h2>
+            <ul>
+                <li><strong>Skills:</strong> HTML, CSS, Python, Java, C++</li>
+                <li><strong>Experience:</strong> 3+ years in front-end development</li>
+            </ul>
+            <h2>Goals & Frustrations</h2>
+            <ul>
+                <li><strong>Goals:</strong> Master full-stack development</li>
+                <li><strong>Frustrations:</strong> Debugging complex JavaScript issues</li>
+            </ul>
+            <div class="progress-bar">
+                <p>HTML Proficiency: 90%</p>
+                <div class="bar"><div class="fill" style="width: 90%;"></div></div>
+            </div>
+        </div>
+
+        <!-- Volunteering Section -->
+        <div class="volunteering">
+            <h2>Volunteering</h2>
+            <ul>
+                <li><img src="student-4-w2120560/png/volunteer-work.jpg" alt="Community Work"> Community Tech Workshops</li>
+                <li><img src="student-4-w2120560/png/tree-icon.jpg" alt="Planting Trees"> Reforestation Projects</li>
+            </ul>
+        </div>
+
+        <!-- Interests Section -->
+        <div class="interests">
+            <h2>Interests</h2>
+            <ul>
+                <li><span>&#127757;</span> Environmental Awareness</li>
+                <li><span>&#128187;</span> Tech Innovations</li>
+            </ul>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="calendar">
+            <h2>Availability</h2>
+            <table>
+                <tr><th>Day</th><th>Available Time</th></tr>
+                <tr><td>Monday</td><td>10 AM - 4 PM</td></tr>
+                <tr><td>Tuesday</td><td>10 AM - 4 PM</td></tr>
+                <tr><td>Thursday</td><td>10 AM - 4 PM</td></tr>
+                <tr><td>Saturday</td><td>12 PM - 7 PM</td></tr>
+            </table>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact">
+            <h2>Contact Me</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <!--============ FOOTER ============-->
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <div class="footer__content grid">
+                <div>
+                    <a href="home.html" class="footer__logo">EcoSpark</a>
+                    <p class="footer__description">
+                        Join with us and make <br>
+                        a better world
+                    </p>
+                </div>
+                <div class="footer__data grid">
+                    <div>
+                        <h3 class="footer__title"><a href="home.html">Home</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="volunteer.html">Volunteer</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="table.html">Table</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="Profile.html">Profile</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="feedback.html">Feedback</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="Sitemap.html">Sitemap</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="Team Page.html">Team</a></h3>
+                    </div>
+                    <div>
+                        <h3 class="footer__title"><a href="pageEditor_ST4.html">Page editor</a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__group">
+                <div class="footer__social">
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-facebook-line"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-instagram-line"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-twitter-x-line"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-youtube-line"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-whatsapp-line"></i>
+                    </a>
+                    <a href="#" target="_blank" class="footer__social-link">>
+                        <i class="ri-mail-line"></i>
+                    </a>
+                </div>
+                <div class="footer__copy">
+                    &copy; 2025 EcoSpark. All rights reserved
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--============ SCROLL TOP ============-->
+    <a href="Profile.html" class="scrollup" id="scroll-up">
+        <i class="ri-arrow-up-line"></i>
+    </a>
+
+    <!-- Adding JavaScript -->
+    <script src="js/scrollRevel.main1.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
