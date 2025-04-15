@@ -1,0 +1,166 @@
+/* General body styling */
+body{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px; /* Base font size for the page */
+    margin: 20px;   /* Margin around the body content */
+    background-image: url('../student-3-w2120122/images/feedback_background.jpg');   /* Backgroung image*/
+    background-size: cover;   /* Covers entire page with the background image */
+    background-position: center;   /* Centers the background image */
+    background-attachment: fixed;  /* Fix background image when scrolling */
+    margin-top: 10rem; /* Adjust spacing between header and page content */
+}
+
+/* Heading styling */
+h1{
+    margin-bottom: 30px;   /* Margin below the h1 heading */
+}
+
+/* Form container styling */
+form {
+    padding-top: 30px;   /* Padding to the top of the form */
+    max-width: 750px;   /* Limits the form's maximum width */
+    margin: auto;   /* Centers the form horizontally */
+    padding: 35px;   /* Padding inside the form container */
+    border-radius: 25px;   /* Rounds the corners of the form */
+    border: 2px solid #b0b0b0;   /* Border around the form */
+    background-color: rgba(255, 255, 255, 0.5);   /* semi-transparent white background*/
+    backdrop-filter: blur(8px);   /* Blur effect to the form background */
+    -webkit-backdrop-filter: blur(8px);   /* Ensures compatibility with Webkit browsers*/
+}
+
+/* Fieldset styling */
+fieldset{
+    border-radius: 25px;   /* Rounds the corners of the fieldset */
+    padding: 15px;   /* Padding inside the fieldset */
+    margin-bottom: 30px;   /* Space below each fieldset */
+    border: 3px solid black;   /* Border around the fieldset */
+}
+
+/* Legend styling */
+legend{
+    text-align: left;   /* Aligns the legend text to the left */
+    padding: 5px;  /* Padding around the legend text */  
+    font-weight: 600;   /* Text bold */
+    color: rgb(78, 76, 76);   /* Text color */
+    font-size: 25px;   /* Font size */
+}
+
+/* Input, textarea and select styling */
+input, textarea, select{
+    font-size: 16px;  /* The font size */
+    margin: 6px;   /* Margin around the elements */
+    border-radius: 10px;   /* Rounds the corners of the elements*/
+    background-color: whitesmoke;   /* Background color */
+    padding: 4px 6px;   /* Padding inside the elements */
+}
+
+/* Input Field styling: sets fixed height and width for the input fields */
+input{
+    height: 1cm;   
+    width: 10cm;   
+}
+
+/* Textarea styling: sets fixed height and width for the textarea */
+textarea{
+    height: 1.8cm;
+    width: 10cm;
+    resize: vertical;   /* Allows the user to resize the textarea vertically */
+}
+
+/* Select dropdown styling: sets fixed height and width for the dropdown menu*/
+select{
+    height: 0.8cm;
+    width: 4cm;
+}
+
+/* Focus styling for input, textarea, and select: Adds a border when the element is focused */
+input:focus, textarea:focus, select:focus {
+    border: 2px solid #234012;
+}
+
+/* Radio buttons and checkbox styling: sets a fixed size and add margin */
+input[type="radio"], input[type="checkbox"] {
+    height: 16px;   /* Fixed height for radio buttons and checkboxes */
+    width: 16px;   /* Fixed width for radio buttons and checkboxes */
+    margin: 16px;   /* Margin around radio buttons and checkboxes */
+    cursor: pointer;   /* Changes the cursor to a pointer when hovering */
+}
+
+/* File input styling */
+input[type="file"] {
+    background-color: #1f50038f;   /* Background colour */
+    color: white;   /* Text color */
+    font-size: 16px;   /* Font size */
+    height: 1.5cm;   /* Height */
+    padding: 10px 20px;   /* Padding inside the file input*/
+}
+
+/* File input hover effect */
+input[type="file"]:hover {
+    cursor: pointer;   /* Changes the cursor to a pointer */
+    transition: 0.6s ease-in-out;  /* Smooth transition effect */
+    filter: brightness(1.2);   /* Increases brightness on hover */
+}
+
+/* Rating system styling */
+.rating{
+    display: flex;   /* Flexbox to align the rating stars */
+    justify-content: center;   /* Centers the stars horizontally */
+    font-size: 50px;   /* Sets the size of the stars */
+    direction:rtl;   /* Displays stars from right to left */
+}
+
+/* Hide default radio buttons in the rating system */
+.rating input{
+    display: none;   /* Hides the radio buttons */
+}
+
+/* Rating label (stars) styling */
+.rating label {
+    cursor: pointer;   /* Changes the cursor to a pointer */
+    color: whitesmoke;   /* Default star color */
+    filter: brightness(1.2);   /* Slight brightness effect */
+    transition: color 0.4s ease-in-out;   /* Smooth color transition */
+}
+
+/* Styling for selected and hovered stars: Changes the star color to gold */
+.rating input:checked + label,
+.rating input:checked + label ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: gold;
+}
+
+/* Reset button styling */
+input[type="reset"] {
+    background-color: #9f0d02;   /* Background color */
+    color: whitesmoke;   /* Text color */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    background-color: #234012;  /* Background color */
+    color: whitesmoke;   /* Text color */
+}
+
+/* Hover effects for submit and reset buttons */
+input[type="submit"]:hover, input[type="reset"]:hover  {
+    transition: all 0.4s ease-in-out;   /* Smooth transition effect */
+    cursor: pointer;   /* Changes the cursor to a pointer */
+    filter: brightness(1.2);   /* Increases brightness on hover */
+}
+
+/* Error massage styling */
+.error{
+    color: #9f0d02;   /* Text color to be red */
+    font-size: 14px;   /* Font size */
+    text-align: center;   /* Centers the error message */
+}
+
+/* Footer styling: adjust margins */
+.footer{
+    margin-right: -50px;   /* Adjusts the right margin of the footer */
+    margin-bottom: -70px;   /* Adjusts the bottom margin of the footer */
+    margin-top: 5rem;   /* Extra margin at the top of the footer */
+}

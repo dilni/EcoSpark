@@ -1,0 +1,217 @@
+
+
+/* General page styling */
+
+/*body {
+    background-color: #57cdb2e4;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}*/
+body {
+    background-image: url('../student-2-w2120110/png-table/nature7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.table-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    margin: 3rem;
+}
+
+/* Adjust spacing between header and page content */
+body {
+    margin-top: 170px;
+}
+
+/* Table Styling */
+/*.table-title {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+}*/
+/* Table title styling */
+.table-title {
+    background-color: rgba(255, 254, 254, 0.523);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: rgb(6, 6, 6); /* Change title color to white */
+}
+
+/*.table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Dark shadow around the table */
+/*}*/
+
+.table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.452); /* Remove white background and add transparency */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Apply blur effect for Safari */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Dark shadow around the table */
+}
+
+.table th, .table td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Main content styling */
+.content-table {
+    border-collapse: collapse; /* Ensures borders collapse properly */
+    font-size: 0.9em;
+    min-width: 480px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8); /* Dark shadow around the table */
+    border: 1px solid black;
+}
+
+.content-table thead tr {
+    background-color: #1d6e39b9;
+    color: rgb(253, 254, 255);
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Consistent border styling for ALL cells */
+.content-table th, 
+.content-table td {
+    padding: 12px 15px;
+    border: 1px solid black !important; /* Normal borders */
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid black;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #ccc6c6;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 1px solid black; /* Normal border for last row */
+}
+
+/* Country flag and name styling for table cells */
+.content-table td:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 5px;
+    border: 1px solid black !important; /* Normal border */
+}
+
+.content-table td:nth-child(2) img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    display: block;
+}
+.button {
+    background-color: hsla(0, 33%, 3%, 0.473);
+    padding: 0.5rem o.62rem;
+    color: var(--title-color);
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .content-table td:nth-child(2) {
+        padding-left: 5px;
+        align-items: center;
+        border: 1px solid black !important; /* Normal border on mobile */
+    }
+    
+    .content-table td:nth-child(2) img {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 5px;
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .content-table thead {
+        display: none;
+    }
+    
+    .content-table, .content-table tbody, .content-table tr, .content-table td {
+        display: block;
+        width: 100%;
+    }
+    
+    .content-table tr {
+        margin-bottom: 1rem;
+        border: 1px solid black;
+        padding: 10px;
+        background: white;
+    }
+    
+    .content-table td {
+        text-align: center;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid black !important; /* Normal border on mobile */
+    }
+    
+    .content-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        width: 100%;
+        display: block;
+        margin-bottom: 5px;
+        position: absolute;
+        top: 5px;
+        left: 0;
+        text-align: center;
+    }
+    
+    /* Ensure country column maintains its styling on mobile */
+    .content-table td:nth-child(2) {
+        padding-top: 30px;
+    }
+}
+
+
+
+
+
+

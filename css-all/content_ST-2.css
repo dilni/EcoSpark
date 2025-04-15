@@ -1,0 +1,483 @@
+
+
+/* ====== Main Content Styling ====== */
+.main {
+    max-width: 1100px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 4rem auto;
+    padding-top: 3rem;
+    margin-left: 150px;
+}
+
+/* ====== Content Row Layout ====== */
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Changed from flex-start to center for better alignment */
+    gap: 30px;
+    margin-bottom: 60px; /* Increased from 40px for better spacing */
+    padding: 0 2rem;
+}
+
+/* Reverse layout for alternating sections */
+.content-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Stacked layout for effects section */
+.content-row.stacked {
+    flex-direction: column;
+}
+
+/* Left and right content containers */
+.content-left, .content-right {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Content sections */
+.content-left section, .content-right section {
+    width: 100%;
+    line-height: 1.6; /* Ensure consistent line height */
+    /*flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.575); /* Darker, more pronounced shadow */
+}
+
+/* Full width content for stacked layout */
+.content-full {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Adjust spacing between header and page content */
+body {
+    margin-top: var(--header-height-1);
+    margin-left: 10%;
+}
+
+
+/* Section styling */
+section {
+    background: #f3dbb8;
+    margin-bottom: 0 !important; /* Override default margin */
+    line-height: 1.6; /* Ensure consistent line height */
+    border-width: 10px;
+}
+
+/* Media containers */
+.video-container1, .media1, .media2{
+    background: rgba(243, 219, 184, 0.3);
+    border-radius: 8px;
+    padding: 15px; /* Increased from 10px */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.545);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px; /* Minimum height for media containers */
+}
+
+/* Special styling for media3 container */
+.media3 {
+    background: rgba(243, 219, 184, 0.3);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.545);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: /*400px*/auto;
+    overflow: hidden; /* Prevent image from spilling out */
+    position: relative; /* For positioning the image */
+    
+}
+
+/* Improved styling for media3 image */
+.media3 img {
+    width: 100%; /* Fill container width */
+    max-width: 1000px; /* Limit maximum width */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    object-fit: contain; /* Ensures image is fully visible */
+    margin: 0 auto; /* Center the image */
+}
+
+
+.video-container2{
+    background: rgba(243, 219, 184, 0.3);
+    border-radius: 8px;
+    padding: 15px; /* Increased from 10px */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.545);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 600px; /* Minimum height for media containers */
+    height: auto; /* Allow container to adjust to content */
+    position: relative; /* For proper positioning */
+}
+
+
+
+/* Video content styling */
+.responsive-video1{
+    width: 100%; /* Changed from 50% to 100% for better display */
+    height: auto;
+    max-width: 90%; /* Prevent video from touching container edges */
+    display: block;
+    border-radius: 5px;
+    max-height: 550px; /* Maximum height for videos */
+    object-fit: contain; /* Ensures video covers container nicely */
+}
+
+.responsive-video2 {
+    width: 60%; /* Changed from 50% to 100% for better display */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    max-height: 800px; /* Maximum height for videos */
+    object-fit: cover; /* Ensures video covers container nicely */
+}
+
+/* Image content styling */
+.media1 img, .media2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    max-height: 400px; /* Maximum height for images */
+    object-fit: contain; /* Ensures image is fully visible */
+}
+
+
+
+.media3 img {
+    width: 120%; /* Make image wider than container */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    max-height: 500px; /* Increased maximum height */
+    object-fit: contain; /* Ensures image is fully visible */
+    margin: 0 auto; /* Center the image */
+    transform: scale(1.2); /* Scale up the image */
+}
+
+/* ====== Heading Styles ====== */
+main section h2 {
+    font-size: 28px; /* Increased from 20px */
+    color: #005f73;
+    border-bottom: 2px solid #005f73;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    line-height: 1.6; /* Consistent line height */
+}
+
+main section h3 {
+    font-size: 24px; /* Increased from 20px */
+    color: #0a9396;
+    margin-top: 15px;
+    line-height: 1.6; /* Consistent line height */
+}
+
+/* ====== List Styling ====== */
+main section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.6; /* Consistent line height */
+}
+
+main section ul li {
+    margin-bottom: 8px;
+    line-height: 1.6; /* Consistent line height */
+    font-size: 18px; /* Increased from default */
+}
+
+/* ====== Remove Bullets from Headings ====== */
+main section h2,
+main section h3 {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* ====== Paragraph Styling ====== */
+main section p {
+    font-size: 18px; /* Increased from 16px */
+    margin-bottom: 15px;
+    line-height: 1.8; /* Consistent line height */
+}
+
+.button {
+    background-color: hsla(0, 29%, 3%, 0.603);
+    padding: 1rem 1.25rem;
+    color: var(--title-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 5rem;
+    font-family: var(--second-font);
+    font-weight: var(--font-semi-bold);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 100px;
+    margin-top: 50px;
+}
+
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Adjust height */
+    background: #444; /* Navbar color */
+    color: white;
+    z-index: 1; /* Lower than sidebar */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+
+/* Sidebar (Hidden by Default) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 220px;
+    height: 100vh;
+    background: #151414;
+    color: rgb(184, 170, 170);
+    z-index: 2;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Push items to top & bottom */
+    padding-top: -10px;
+
+}
+
+.sidebar ul {
+    flex-grow: 0px; /* Allow menu to grow */
+    padding: 10px;
+    padding-top: 130px;
+}
+
+.sidebar .bottom-links {
+    margin-top: 0; /* Push links to bottom */
+
+}
+.sidebar ul li {
+    padding: 40px 50px; /* Adjust spacing between menu items */
+    text-align: left; /* Align text */
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar ul li a:hover {
+    background-color: #615f5f7b;
+}
+
+/* Close button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1;
+    margin-top: 130px;
+}
+
+/* Menu Button (Hamburger) */
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 110px;
+    margin-left: -15px;
+}
+
+/* Content styling */
+.content {
+    padding: 20px;
+    margin-left: 20px; /* Ensures content does not overlap with button */
+    transition: 0.3s;
+
+}
+
+
+/* ====== Responsive adjustments ====== */
+/* For large screens */
+@media screen and (min-width: 1200px) {
+    .content-row {
+        gap: 50px;
+    }
+    
+    .responsive-video, .responsive-video2, .media1 img, .media2 img, .media3 img {
+        max-height: 450px;
+    }
+    
+    main section p {
+        font-size: 20px; /* Even larger on big screens */
+    }
+    
+    main section ul li {
+        font-size: 20px; /* Even larger on big screens */
+    }
+    
+    main section h2 {
+        font-size: 32px; /* Even larger on big screens */
+    }
+    
+    main section h3 {
+        font-size: 26px; /* Even larger on big screens */
+    }
+
+    .media3 {
+        min-height: 450px;
+        padding: 25px;
+    }
+    
+    .media3 img {
+        max-width: 1200px; /* Larger on big screens */
+    }
+
+}
+
+/* For medium screens */
+@media screen and (max-width: 992px) {
+    .content-row {
+        gap: 25px;
+    }
+    
+    .video-container1, .media1, .media2, .media3, .video-container2 {
+        min-height: 250px;
+    }
+    
+    .responsive-video, .responsive-video2, .media1 img, .media2 img, .media3 img {
+        max-height: 350px;
+    }
+
+    .media3 {
+        min-height: 350px;
+    }
+}
+
+/* For small screens */
+@media screen and (max-width: 768px) {
+    .content-row, .content-row.reverse {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .content-left, .content-right, .content-full {
+        width: 100%;
+    }
+    
+    .video-container1, .media1, .media2, .media3,.video-container2 {
+        margin-bottom: 20px;
+        min-height: 200px;
+    }
+    
+    
+    .responsive-video, .responsive-video2, .media1 img, .media2 img, .media3 img {
+        max-height: 300px;
+    }
+
+    .media3 {
+        min-height: 300px;
+        padding: 15px;
+    }
+    
+    /*.media3 img {
+        width: 100%;
+        transform: scale(1);
+        max-height: 400px;
+    }*/
+    
+    main section h2 {
+        font-size: 26px; /* Slightly smaller on small screens */
+    }
+    
+    main section h3 {
+        font-size: 22px; /* Slightly smaller on small screens */
+    }
+    
+    main section p, main section li {
+        font-size: 17px; /* Slightly smaller on small screens */
+    }
+}
+
+
+/* For extra small screens */
+@media screen and (max-width: 480px) {
+    .content-row {
+        padding: 0 1rem;
+    }
+    
+    .video-container1, .media1, .media2, .media3, .video-container2 {
+        min-height: 180px;
+        padding: 10px;
+    }
+    
+    .responsive-video, .responsive-video2, .media1 img, .media2 img, .media3 img {
+        max-height: 250px;
+    }
+    
+    main section h2 {
+        font-size: 24px; /* Smaller on mobile */
+    }
+    
+    main section h3 {
+        font-size: 20px; /* Smaller on mobile */
+    }
+    
+    main section p, main section li {
+        font-size: 16px; /* Smaller on mobile but still larger than original */
+    }
+
+    .media3 {
+        min-height: 200px;
+        padding: 10px;
+    }
+}
+
+
+

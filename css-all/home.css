@@ -1,0 +1,190 @@
+/*=============== HOME ===============*/
+.home {
+    position: relative; /* Ensure it is above the header */
+    background: linear-gradient(90deg,#08210f,#0f4d2c, #198754,#3ac985);
+}
+
+.home__bg {
+    position: absolute;
+    top: -165px; /*remove the space between the header and the image*/
+    left: 0;
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.home__shadow {
+    position: absolute;
+    top: 620px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: hsla(0, 0%, 4%, 0) 58%;
+}
+
+.home__container {
+    position: relative;
+    z-index: 1;
+}
+
+.home__data {
+    max-width: 600px;
+    margin-bottom: 3rem;
+}
+
+.home__subtitle {
+    font-size: var(--h3-font-size);
+    color: aliceblue;
+    margin-bottom: 1rem;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.644); /* Adjust the shadow values as needed */
+}
+
+.home__title {
+    font-size: var(--biggest-font-size);
+    color: aliceblue;
+    margin-bottom: 2rem;
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.601); /* Adjust the shadow values as needed */
+}
+
+.home__description {
+    margin-bottom: .1rem;
+    color: rgb(223, 237, 249);
+    text-align: left;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.979); /* Adjust the shadow values as needed */
+    font-size: var(--h3-font-size);
+    font-family: var(--font-semi-bold);
+}
+
+.home__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.home__card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    height: 200px; /* Adjust height as needed */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.home__card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.home__card:hover {
+    transform: translateY(-10px);/*-5px*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.home__card:hover .home__card-img {
+    transform: scale(1.1);
+}
+
+.home__card-title {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    color: var(--title-color);
+    font-size: var(--h3-font-size);
+    z-index: 1;
+    max-width: 85%;
+}
+
+
+.home__card-shadow {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.button {
+    background-color: hsla(0, 0%, 100%, .2);
+    padding: 1.25rem 1.5rem;
+    color: var(--title-color);
+    display: inline-flex;
+    align-items: center;
+    column-gap: 5rem;
+    font-family: var(--body-font1);
+    font-weight: var(--font-semi-bold);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px); /*For safari*/
+    font-size: var(--h3-font-size);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.851); /* Adjust the shadow values as needed */
+    margin-bottom: 2rem;
+}
+
+
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (min-width: 768px) {
+    .home__cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .home__shadow {
+        position: absolute;
+        top: 620px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: hsla(0, 0%, 4%, 0) 58%;
+    }
+}
+
+@media screen and (min-width: 1152px) {
+    .home__container {
+        padding-top: 3rem; /* Adjust from 6.5rem to 3rem */
+        margin-top: -90px; /* Pull content up more on larger screens */
+    }
+    .home__shadow {
+        height: 980px;
+    }
+    .home__data {
+        margin-top: -20px;
+    }
+    .home__subtitle {
+        font-size: var(--h2-font-size);
+        margin-left: -8rem;
+    }
+    .home__title {
+        margin-left: -9rem;
+        word-wrap: break-word;
+        width: 200%;
+    }
+    .home__description {
+        margin-bottom: 3.5rem;
+        margin-left: -9rem;
+    }
+    .home__cards {
+        grid-template-columns: repeat(4, 260px);
+    }
+    .home__card-title {
+        left: 1.5rem;
+        bottom: 1.5rem;
+    }
+    .button {
+        column-gap: 3rem;
+    }
+    .home__shadow {
+        position: absolute;
+        top: 620px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        background: hsla(116, 45%, 12%, 0) 58%;
+    }
+}

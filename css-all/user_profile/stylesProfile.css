@@ -1,0 +1,233 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 6rem;
+
+    /*=============== Colors ===============*/
+    --title-color: white; 
+    --text-color: hsl(0, 0%, 95%); 
+    --text-color-light: hsl(0, 0%, 60%);
+    --body-color: white; 
+    --container-color: hsl(0, 0%, 8%);
+    --background-color-1: hsl(151, 34%, 12%);
+    --background-color-2: hsl(43, 34%, 52%);
+    --background-color-3: hsl(170, 44%, 60%);
+    
+    /*=============== Font and Typography ===============*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1.1rem;
+    --h3-font-size: 0.95rem;
+    --normal-font-size: 0.85rem;
+    --small-font-size: 0.75rem;
+}
+
+/* General Styles */
+body {
+    font-family: var(--body-font);
+    background: url("bg-picture.jpg");
+    background-size: cover; /* Ensures the image covers the entire screen */
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+
+}
+
+/* Profile Container */
+.profile-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    flex:1;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 150vh;
+    overflow-y: auto;
+    background: var(--background-color-1); 
+    padding: 15px;
+    padding-top: 10rem;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    margin-top: 140px;
+    
+    
+}
+
+/* Profile Header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 15px; 
+    padding: 10px;
+    margin-top: -140px;
+}
+
+/* Increased Profile Picture Size and Shifted to Left */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--background-color-3);
+}
+
+/* Shifted Username and Role to the Right */
+.profile-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Username */
+.username {
+    font-size: var(--h1-font-size);
+    font-family: var(--second-font);
+    font-weight: bold;
+    color: var(--title-color); 
+}
+
+/* Role */
+.role {
+    font-size: var(--h3-font-size);
+    color: var(--text-color); 
+    margin-top: 20px; 
+}
+
+/* About Me Section */
+.profile-intro {
+    text-align: center;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+    background-color: var(--body-color); 
+}
+
+/* Sections */
+.profile-info, .volunteering, .interests, .calendar, .contact {
+    text-align: left;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+    background-color: var(--body-color); 
+}
+
+/* Progress Bar */
+.progress-bar .bar {
+    width: 100%;
+    height: 8px;
+    background: var(--text-color-light);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.progress-bar .fill {
+    height: 100%;
+    background: var(--background-color-3);
+    border-radius: 5px;
+}
+
+/* Volunteering & Interests */
+.volunteering ul, .interests ul {
+    list-style: none;
+    padding: 0;
+}
+
+.volunteering li, .interests li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+    font-size: var(--small-font-size);
+}
+
+.volunteering img, .interests span {
+    width: 18px;
+    height: 18px;
+}
+
+/* Table Styling */
+.calendar table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: var(--small-font-size);
+}
+
+.calendar th, .calendar td {
+    border: 1px solid var(--text-color-light);
+    padding: 6px;
+    text-align: center;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input, .contact textarea {
+    margin-top: 5px;
+    padding: 6px;
+    font-size: var(--small-font-size);
+    border: 1px solid var(--text-color-light);
+    border-radius: 5px;
+}
+
+.contact button {
+    background: var(--background-color-3);
+    color: white;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: var(--small-font-size);
+}
+
+/* Hover Effects */
+button:hover, .volunteering li:hover, .interests li:hover {
+    background-color: var(--background-color-2);
+    color: white;
+    transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.9); 
+        height: auto;
+    }
+
+    .profile-header {
+        flex-direction: column;
+        align-items: center; /* Center on mobile */
+        gap: 10px;
+    }
+
+    .profile-info-container {
+        align-items: center; /* Center text on mobile */
+    }
+
+    .profile-intro {
+        text-align: center;
+        margin-top: 10px;
+        padding: 10px;
+    }
+
+    /* Adjust Profile Image for Mobile */
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+}

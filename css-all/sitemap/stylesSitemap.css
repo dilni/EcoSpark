@@ -1,0 +1,162 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 6rem;
+
+    /*=============== Colors ===============*/
+    --title-color: white; 
+    --text-color: hsl(0, 0%, 95%); 
+    --text-color-light: hsl(0, 0%, 60%);
+    --body-color: white; 
+    --container-color: hsl(0, 0%, 8%);
+    --background-color-1: hsl(151, 34%, 12%);
+    --background-color-2: hsl(43, 34%, 52%);
+    --background-color-3: hsl(170, 44%, 60%);
+    
+    /*=============== Font and Typography ===============*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    --biggest-font-size: 2.5rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.3rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.85rem;
+    --small-font-size: 0.75rem;
+}
+
+/* General Styles */
+body {
+    font-family: var(--body-font);
+    background: white;
+    background-size: cover;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* General Sitemap Styles */
+.sitemap-container {
+    text-align: left;
+    padding: 40px;
+    padding-top: 10rem; /* Adjusted for better spacing */
+    background: var(--background-color-1);
+    border-radius: 10px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    width: 85%; /* Slightly increased width */
+    max-width: 1300px; /* Increased max size to fit all elements */
+    margin: auto;
+    min-height: 100vh; /* Leaves space for footer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    padding-right: 5rem;
+    overflow: visible; /* Ensures no content is hidden */
+    margin-bottom: 15px;
+    margin-top: 150px;
+
+}
+
+/* Styling for the Sitemap Header */
+.sitemap-container h2 {
+    font-size: 3rem; /* Increased size */
+    color: white; /* Ensures header is white */
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: -110px;
+    
+
+}
+
+/* Make the SVG Larger */
+.sitemap-svg {
+    width: 100%; /* Adjust to fit the container */
+    max-width: 1200px; /* Increased max size */
+    height: auto; /* Maintain aspect ratio */
+    min-height: 700px; /* Increased to fit all links */
+    overflow: visible; /* Prevents content from being cut off */
+   
+}
+
+/* Sitemap Nodes - Increase Size */
+.sitemap-node rect {
+    width: 140px; /* Larger boxes */
+    height: 60px; /* Taller nodes */
+    rx: 12; /* Rounded corners */
+    fill: var(--background-color-2);
+    stroke: white;
+    stroke-width: 2;
+    cursor: pointer;
+    transition: fill 0.3s;
+}
+
+.sitemap-node:hover rect {
+    fill: var(--background-color-3);
+}
+
+/* Make Text Larger */
+.sitemap-text {
+    font-size: var(--h2-font-size); /* Increase text size */
+    fill: white;
+    font-family: var(--body-font);
+    text-anchor: middle;
+    dominant-baseline: middle;
+}
+
+/* Increase Line Thickness */
+.sitemap-line {
+    stroke: white;
+    stroke-width: 3; /* Thicker lines */
+}
+
+/* Fix Overflow Issues */
+.sitemap-container svg {
+    overflow: visible;
+    padding-bottom: 0rem; /* Ensures space for bottom links */
+
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sitemap-container {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .sitemap-svg {
+        max-width: 1000px; /* Scale down slightly */
+        min-height: 600px;
+    }
+
+    .sitemap-node rect {
+        width: 120px; /* Reduce size for smaller screens */
+        height: 50px;
+    }
+
+    .sitemap-text {
+        font-size: var(--h3-font-size); /* Adjust text size */
+    }
+}
+
+@media (max-width: 480px) {
+    .sitemap-svg {
+        max-width: 100%;
+        min-height: 500px;
+    }
+
+    .sitemap-node rect {
+        width: 110px;
+        height: 45px;
+    }
+
+    .sitemap-text {
+        font-size: var(--normal-font-size);
+    }
+}

@@ -1,0 +1,64 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+    --header-height: 6rem;
+
+    /*=============== Colors ===============*/
+    --title-color: white; 
+    --text-color: hsl(0, 0%, 95%); 
+    --text-color-light: hsl(0, 0%, 60%);
+    --body-color: white; 
+    --container-color: hsl(0, 0%, 8%);
+    --background-color-1: hsl(151, 34%, 12%);
+    --background-color-2: hsl(43, 34%, 52%);
+    --background-color-3: hsl(170, 44%, 60%);
+    
+    /*=============== Font and Typography ===============*/
+    --body-font: "Poppins", sans-serif;
+    --second-font: "Montserrat", sans-serif;
+    --biggest-font-size: 2rem;
+    --h1-font-size: 1.25rem;
+    --h2-font-size: 1.1rem;
+    --h3-font-size: 0.95rem;
+    --normal-font-size: 0.85rem;
+    --small-font-size: 0.75rem;
+}
+
+/* General Styles */
+body {
+    font-family: var(--body-font);
+    background: white;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: -30px;
+    margin-left: 80px;
+}
+
+/* Base Fixer  */
+.profile-container {
+    display: flex;
+    flex-direction: column; 
+    flex:1;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 150vh;
+    overflow-y: auto;
+    background: var(--background-color-1); 
+    padding: 15px;
+    padding-top: 32rem;
+    border-radius: 8px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-image{
+    float: left;
+    width: 300px;
+    height: auto;
+    margin-left: 20px;
+}

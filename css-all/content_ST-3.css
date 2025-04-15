@@ -1,0 +1,105 @@
+/* General body styling */
+body{
+    text-align: center;   /* Center-align text */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;   /* Font size */
+    margin: 0;   /* Remove default margin  to avoid unwanted spacing*/
+    padding: 0;   /* Remove default padding */
+    margin-top: 8rem; /* Top margin to push content down from the top */
+    background: linear-gradient(to right, #1c9ac4d0, #086754,  #FFD167, #F78C6A, #35131b);   /* Gradient background to the top margin */
+}
+
+/* Style h1 heading */
+h1{
+    margin: 0;   /* Remove default margin to avoid extra spacing */
+    padding: 20px;   /* Padding around the head text */
+    background: linear-gradient(to right, #1c9ac4d0, #086754,  #FFD167, #F78C6A, #35131b);   /* Set a gradient background to the h1 heading */
+}
+
+/* Style h2 headings inside the .content class */
+.content h2{
+    color: black;   /* Text colour to be black */
+    padding: 20px;   /* Padding around the head text */
+    margin-bottom: 10px;   /* Add a bottom margin */
+}
+    
+/* Style the images */
+img{
+    max-width: 40%;   /* Maximum width to 40% of the container */
+    height: auto;   /* Maintain image's aspect ratio */
+}
+
+/* Common styles for sections */
+.section1, .section2, .section3, .section4{
+    display: flex;   /* Flexbox as layout */
+    flex-direction: row;   /* Arrange elements in a row */
+    justify-content: center; /* Center the elements horixontally */
+    align-items:center;   /* Center elements vertically */
+    padding: 5px;   /* Padding inside the sections */
+    padding-top: 40px;   /* Extra padding at the top */
+    padding-bottom: 40px;   /* Extra padding at the bottom */
+    color: white;   /* Text color to white */
+    text-align: left;   /* Align text to the left within the sections */
+    width: 100%;   /* Make sections take up the full width of their container */
+}
+
+/* Specific background gradients for each sections */
+.section1{
+    background: linear-gradient(to bottom, #1c9ac4d0, #086754);
+}
+
+.section2{
+    background: linear-gradient(to bottom, #086754, #FFD167);
+}
+
+.section3{
+    background: linear-gradient(to bottom, #FFD167, #F78C6A);
+}
+
+.section4{
+    background: linear-gradient(to bottom, #F78C6A, #35131b);
+}
+
+/* Style for the content container */
+.content {
+    display: flex;   /* Flexbox for layout */
+    flex-direction: column;   /* Arrange elements in a column */
+    justify-content: center;   /* Center elements vertically */
+    max-width: 60%;   /* Limit the width of the content container to 60% of its section */
+}
+
+/* Style for the internal navigation bar */
+.internal-nav{
+    display: flex;   /* Flexbox for layout */
+    justify-content: space-between;   /* Space out elements evenly */
+    background-color: black;   /* Background color to be black */
+    padding: 20px;   /* Padding inside the navigation bar */
+    padding-right: 50px;   /* Extra padding on the right */
+    padding-left: 50px;   /* Extra padding on the left */
+    border: 5px solid rgb(78, 81, 79);    /* Solid border around the navigation bar */
+}
+
+/* Style for links inside the internal navigation bar */
+.internal-nav a{
+    font-weight: bold;   /* Make the navigation links bold */
+}
+
+/* Style for the "go to top" button */
+.go-to-top{
+    position: fixed;   /* Fix the button's position relative to the viewport */
+    bottom: 20px;   /* Fix the button's position relative to the viewport */
+    right: 20px;   /* Position the button 20px from the right */
+    background-color:   white;   /* Set the button's background color to white */
+    color: black;   /* Set the button's text color to black */
+    padding: 10px 20px;   /* Padding inside the button */
+    text-decoration: none;   /* Remove the underline from the link */
+    border-radius: 5px;   /* Rounded corners to the button */
+    font-weight: bold;   /* Make the button text bold */
+    z-index: 1000;   /* Button stays on top of other elements */
+}
+
+/* Hover effect for the "go to top" button */
+.go-to-top:hover{
+    color: white;   /* Change the text color to white on hover */
+    background-color: black;   /* Change the background color to black on hover */
+}

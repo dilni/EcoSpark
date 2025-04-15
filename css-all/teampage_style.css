@@ -1,0 +1,101 @@
+/* General body styling */
+body{   
+    background-image: url('../student-3-w2120122/images/team_background.jpg');   /* Background image */
+    background-size: cover;   /* Ensure background covers the entire page */
+    background-position: center;   /* Center the background image */
+    background-attachment: fixed;   /* Fix background image when scrolling */
+    text-align: center; /* Center-align all text */
+    margin: 0;   /* Remove default margin */
+    padding: 0;   /* Remove default padding */
+    margin-top: 10rem;   /* Add top margin to create space at the top of the page to make space for the header */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Style for the team section */
+.team{
+    display: flex;   /* Flexbox to arrange team members */
+    justify-content:space-evenly;   /* Space evenly between team members */
+    gap: 20px;  /* Space between team members */ 
+    flex-wrap: wrap;   /*wrap to the next line if there's not enough space */
+    margin-bottom: 150px;   /* Bottom margin to create space below the team section */
+    padding: 20px;   /* Padding around the team section */
+}
+
+/* Style for each member */
+.team_member{
+    position: relative;   /* Position reletive for the elements*/
+    flex: 1;   /* Allow each team member to grow and take up equal space */
+    min-width: 100px;   /* Minimum width for each team member */
+    max-width: 180px;   /* Maximum width for each team member */
+    height: 260px;   /* Fixed height for each team member */
+    display: flex;   /* Flexbox to center content */
+    justify-content: center;   /* Center content horizontally */
+    align-items: center;   /* Center content vertically */
+    cursor: pointer;   /* Change cursor to pointer to indicate clickable elements */
+    outline: none;   /* Remove outline on focus */
+    transition: transform 0.3s;   /* Smooth transition for transform effects */
+}
+
+/* Style for the thumbnail image of each team member */
+.thumbnail{
+    width: 100%;   /* Image to take up the full width of its container */
+    height: auto;   /* Maintain the aspect ratio of the image */
+    object-fit: cover;   /* Image to cover the entire container */
+    border-radius: 40px;   /* Round the corners of the image */
+    border-style: double;   /* Double border style */
+    border-width: 10px;   /* Border width */
+    transition: opacity 0.3s, transform 0.3s;   /* Smooth transitions for opacity and transform effects */
+}
+
+/* Style for the details section that appears on hover */
+.details{
+    position: absolute;   /* Position absolutely relative to the team member */
+    top: 110%;   /* Position the details below the team member */
+    width: 100%;   /* Details section to take up the full width */
+    background-color: rgba(0, 0, 0, 0.8);   /* Semi-transparent black background */
+    color: white;   /* Text color to white */
+    padding: 10px;   /* Padding inside the details section */
+    transform: translateY(5px);   /* Slightly move the details down */
+    text-align: center;   /* Center-align the text */
+    box-sizing: border-box;   /* Padding in the element's total width and height */
+    border-radius: 20px;   /* Round the corners of the details section */
+    line-height: 1.5;   /* Line height between two lines */
+    opacity: 0;   /* Initially hide the details section */
+    transition: transform 0.3s ease-in-out;   /* Smooth transition for transform effects */
+}
+
+/* Scale up the team member on hover */
+.team_member:hover{
+    transform: scale(1.05);   /* Slightly increase the size of the team member */
+}
+
+/* Scale up the thumbnail on hover */
+.team_member:hover .thumbnail{
+    transform: scale(1.1);   /* Increase the size of the thumbnail */
+    opacity: 0.9;  /* Change the opacity of the image */
+    border-width: 15px;  /* Increase the border width */
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Show and scale up the details section on hover */
+.team_member:hover .details{
+    opacity: 1;   /* Make the details section visible */
+    transform: scale(1.2);   /* Increase the size of the details section */
+}
+
+/* Scale up the thumbnail when the team member is focused (e.g., via keyboard navigation) */
+.team_member:focus .thumbnail{
+    transform: scale(1.05);   /* Slightly increase the size of the thumbnail */
+}
+
+/* Show the details section when the team member is focused */
+.team_member:focus .details{
+    opacity: 1;   /* Make the details section visible */
+    transform: translateY(0);    /* Reset the transform to its original position */
+}
+
+/* Style for the footer section */
+.footer{
+    position: relative;   /* Position relative for any absolute positioning inside */
+    margin-top: 400px;   /* Add top margin to create space above the footer */
+}
